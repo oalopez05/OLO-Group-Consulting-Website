@@ -1,0 +1,466 @@
+/* Basic Reset & Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #111;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-img {
+    max-height: 90px; /* Increased from 50px */
+    width: auto;
+    margin-right: 25px;
+}
+
+.logo-text {
+    font-size: 2rem; /* Increased from 1.6rem */
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700; /* Bolder font */
+    text-transform: uppercase; /* Makes text uppercase for a cleaner look */
+    letter-spacing: 1px; /* Adds a little space between letters */
+    padding-bottom: 5px; /* Adds space for the border on hover */
+    border-bottom: 2px solid transparent; /* An invisible border to prevent jumping */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Smooth transition */
+}
+
+header nav ul li a:hover {
+    color: #fff;
+    border-bottom-color: #007bff; /* The blue color from your submit button */
+}
+/* --- About Us Section --- */
+.about-section {
+    padding: 4rem 0;
+    background-color: #000; /* Match body background */
+    text-align: center;
+}
+.about-section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+
+/* --- Topics (Services) Section --- */
+.topics-section {
+    padding: 4rem 0;
+    background-color: #000;
+}
+
+.topic-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #222;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+.topic-item:last-child {
+    margin-bottom: 0;
+}
+
+.topic-image {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.topic-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.topic-content {
+    flex: 1.5;
+}
+
+.topic-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.topic-content p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 0.75rem;
+}
+
+.topic-content p strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.topic-item.alt-layout {
+    flex-direction: row-reverse;
+}
+
+.topic-item.alt-layout .topic-image {
+    margin-right: 0;
+    margin-left: 2rem;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 4rem 0;
+    background-color: #111; /* A slightly different dark shade */
+}
+.contact-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.contact-section > .container > p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ddd;
+    font-size: 1.1em;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1a1a1a; /* Match topic item background */
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #ccc;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #f4f4f4;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 2.5rem 0;
+    border-top: 1px solid #333;
+}
+/* Affiliation Logo Styles */
+.affiliations h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #aaa;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.logo-gallery img {
+    height: 75px;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+.logo-gallery img:hover {
+    opacity: 1;
+}
+footer > .container > p {
+    font-size: 0.9rem;
+    margin: 30px 0 0 0;
+}
+
+
+/* --- Responsive Design Adjustments --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-bottom: 1rem;
+    }
+
+    header nav ul {
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .topic-item,
+    .topic-item.alt-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .topic-image,
+    .topic-item.alt-layout .topic-image {
+        margin: 0 0 1.5rem 0; /* Remove side margin, add bottom margin */
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    .header-logo-img {
+        max-height: 40px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .topic-content h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .topic-content p {
+        font-size: 0.95rem;
+    }
+}
+
+/* --- Mobile Navigation & Hamburger Menu --- */
+
+/* Style the hamburger icon itself */
+.hamburger-menu {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* This is the media query where the magic happens */
+@media (max-width: 768px) {
+    /* Hide the original navigation links */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px; /* Height of the header */
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding: 1rem 0;
+    }
+
+    /* This class will be toggled by JavaScript to show the menu */
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /* Show the hamburger menu icon on mobile */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Adjust header layout for mobile */
+    header .container {
+        justify-content: space-between;
+    }
+}
+/* --- Animation On Scroll --- */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* --- About Me Page Specific Styles --- */
+
+.about-me-page-content {
+    padding: 4rem 0;
+    background-color: #000;
+}
+
+.about-me-page-content h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2rem;
+}
+
+.about-me-layout {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 2rem; /* Space between image and text */
+}
+
+.about-me-image {
+    flex-basis: 30%; /* Image takes up about 30% of the width */
+}
+
+.about-me-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Slightly rounded corners for the image */
+}
+
+.about-me-text {
+    flex-basis: 70%; /* Text takes up the remaining width */
+}
+
+.about-me-text p {
+    font-size: 1.1em;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments for the About Me page */
+@media (max-width: 768px) {
+    .about-me-layout {
+        flex-direction: column; /* Stack image and text on top of each other */
+        align-items: center; /* Center items when stacked */
+    }
+
+    .about-me-image {
+        max-width: 300px; /* Constrain image size on mobile */
+        margin-bottom: 2rem;
+    }
+}
+/* --- Team Photo Section --- */
+.team-photo-section {
+    padding: 0 0 4rem 0; /* Add padding to the bottom */
+    background-color: #000;
+    text-align: center;
+}
+
+.team-photo-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 2rem;
+}
+
+.team-photo-section img {
+    max-width: 50%; /* Changed from 100% */
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+/* --- Intro Logo on Main Page --- */
+.intro-logo {
+    display: block;
+    width: 100%; /* Add this line to ensure it scales down */
+    max-width: 300px; /* This is the maximum size it can be */
+    margin: 0 auto 2rem auto;
+}
